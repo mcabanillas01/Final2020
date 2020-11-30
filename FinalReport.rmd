@@ -37,14 +37,28 @@ Every question is of the cat~cat type
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
+##Graphical Descriptive Results 
+
 ```{r}
-dataF = filter(FinalData,sex=="gal")
-barchartGC(~infected + treatment,data=dataF)
-barchartGC(~infected + treatment,data=dataF, type="percent")
+dataG = filter(FinalData,sex=="guy")
+barchartGC(~infected + treatment,data=dataG)
+barchartGC(~infected + treatment,data=dataG, type="percent", main="guys")
 
 ```
 
-Among the females that contracted Covid twice as many took the placebo. Therefore it appears that the vaccine does have an effect.  
+Among the females that contracted Covid twice as many took the placebo. Therefore it appears that the vaccine does have a positive effect by preventing glas from contracting covid.  
+
+```{r}
+dataF = filter(FinalData,sex=="gal")
+barchartGC(~infected + treatment,data=dataF)
+barchartGC(~infected + treatment,data=dataF, type="percent", main="gals")
+
+```
+
+
+
+
+
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
