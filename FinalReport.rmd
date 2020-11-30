@@ -46,7 +46,7 @@ barchartGC(~infected + treatment,data=dataG, type="percent", main="guys")
 
 ```
 
-Among the females that contracted Covid twice as many took the placebo. Therefore it appears that the vaccine does have a positive effect by preventing glas from contracting covid.  
+It appears that the vaccine has a negative effect on the guys since they are more likely to get Covid if they had the vaccine.    
 
 ```{r}
 dataF = filter(FinalData,sex=="gal")
@@ -55,6 +55,7 @@ barchartGC(~infected + treatment,data=dataF, type="percent", main="gals")
 
 ```
 
+Among the females that contracted Covid twice as many took the placebo. Therefore it appears that the vaccine does have a positive effect by preventing gals from contracting covid.
 
 
 
