@@ -25,15 +25,26 @@ $H_A$ The alternative null hypothesis, is the vaccine has an effect on whether o
 
 
 # Methods
+Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->  
 
-<!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
+Every question is of the cat~cat type  
 
+
+# Results 
+
+<!--Decide on your methods:  use "variable analysis" or other appropriate descript
 # Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
+```{r}
+dataF = filter(FinalData,sex=="gal")
+barchartGC(~infected + treatment,data=dataF)
+barchartGC(~infected + treatment,data=dataF, type="percent")
 
+```
 
+Among the females that contracted Covid twice as many took the placebo. Therefore it appears that the vaccine does have an effect.  
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
