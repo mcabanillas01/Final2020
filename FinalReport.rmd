@@ -41,6 +41,15 @@ Every question is of the cat~cat type
 
 
 ```{r}
+dataDrugUser = filter(FinalData,DrugUser=="yes")
+barchartGC(~infected + treatment,data=dataDrugUser)
+barchartGC(~infected + treatment,data=dataDrugUser, type="percent", main="DrugUser")
+
+```
+
+It appears that the placebo has a postive effect on the DrugUser not contracting the covid virus once taking it. 
+
+```{r}
 dataLGBTQ = filter(FinalData,LGBTQ=="gay")
 barchartGC(~infected + treatment,data=dataLGBTQ)
 barchartGC(~infected + treatment,data=dataLGBTQ, type="percent", main="gays")
