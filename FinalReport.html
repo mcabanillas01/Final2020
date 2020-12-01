@@ -499,7 +499,7 @@ barchartGC(~infected + treatment,data=dataF)</code></pre>
 <div id="discussion-and-conclusion" class="section level1">
 <h1>Discussion and Conclusion</h1>
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
-<p>It appears that in this study the drug is effective on the gals and the drugusers in preventing them from contracting the Covid virus. But it has a negative effect on the guys and the gays having they contract the virus up to twice as fast if they take the drug.</p>
+<p>It appears that in this study the drug is effective on the gals and the drugusers in preventing them from contracting the Covid virus. But it has a negative effect on the guys and the gays having them contract the virus up to twice as fast if they take the drug.</p>
 <p>###Numerical Summaries</p>
 <pre class="r"><code>table1 &lt;- xtabs(~infected + treatment, data=dataF)
 rowPerc(table1)</code></pre>
@@ -513,6 +513,19 @@ rowPerc(table1)</code></pre>
 ##    covid   4.44    8.67
 ##    OK     95.56   91.33
 ##    Total 100.00  100.00</code></pre>
+<pre class="r"><code>fisher.test(table1)</code></pre>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  table1
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is not equal to 1
+## 95 percent confidence interval:
+##  0.4086458 0.5836109
+## sample estimates:
+## odds ratio 
+##  0.4889403</code></pre>
+<p>The fisher test shows that the odds of getting covid are.50 to 1. The confidence interval for the odd ratio is 0.40 to 0.58.</p>
 </div>
 
 

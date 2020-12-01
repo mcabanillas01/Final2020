@@ -115,4 +115,8 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+```{r}
+fisher.test(table1)
+```
 
+The fisher test shows that the odds of getting covid are.50 to 1. The confidence interval for the odd ratio is 0.40 to 0.58.
