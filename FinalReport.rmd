@@ -105,6 +105,8 @@ Among the females that contracted Covid twice as many took the placebo. Therefor
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 
+It appears that in this study the drug is effective on the gals and the drugusers in preventing them from contracting the Covid virus. But it has a negative effect on the guys and the gays having them contract the virus up to twice as fast if they take the drug. 
+
 ###Numerical Summaries  
 
 ```{r}
@@ -112,3 +114,5 @@ table1 <- xtabs(~infected + treatment, data=dataF)
 rowPerc(table1)
 colPerc(table1)
 ```
+
+
