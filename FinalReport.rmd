@@ -50,6 +50,12 @@ barchartGC(~infected + treatment,data=dataDrugUser, type="percent", main="DrugUs
 It appears that the placebo has a postive effect on the DrugUser not contracting the covid virus once taking it. 
 
 ```{r}
+table1 <- xtabs(~infected + treatment, data=dataDrugUser)
+rowPerc(table1)
+colPerc(table1)
+```
+
+```{r}
 dataLGBTQ = filter(FinalData,LGBTQ=="gay")
 barchartGC(~infected + treatment,data=dataLGBTQ)
 barchartGC(~infected + treatment,data=dataLGBTQ, type="percent", main="gays")
@@ -58,6 +64,14 @@ barchartGC(~infected + treatment,data=dataLGBTQ, type="percent", main="gays")
 
 It appears that the vaccine has a negative effect on the gays since they twice as likely to get Covid if they had the vaccine. 
 
+###Numerical Summaries  
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=dataLGBTQ)
+rowPerc(table1)
+colPerc(table1)
+```
+
 ```{r}
 dataG = filter(FinalData,sex=="guy")
 barchartGC(~infected + treatment,data=dataG)
@@ -65,7 +79,15 @@ barchartGC(~infected + treatment,data=dataG, type="percent", main="guys")
 
 ```
 
-It appears that the vaccine has a negative effect on the guys since they are more likely to get Covid if they had the vaccine.    
+It appears that the vaccine has a negative effect on the guys since they are more likely to get Covid if they had the vaccine.
+
+###Numerical Summaries  
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=dataG)
+rowPerc(table1)
+colPerc(table1)
+```
 
 ```{r}
 dataF = filter(FinalData,sex=="gal")
@@ -82,3 +104,11 @@ Among the females that contracted Covid twice as many took the placebo. Therefor
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+###Numerical Summaries  
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=dataF)
+rowPerc(table1)
+colPerc(table1)
+```
