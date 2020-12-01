@@ -47,7 +47,7 @@ barchartGC(~infected + treatment,data=dataLGBTQ, type="percent", main="gays")
 
 ```
 
-
+It appears that the vaccine has a negative effect on the gays since they twice as likely to get Covid if they had the vaccine. 
 
 ```{r}
 dataG = filter(FinalData,sex=="guy")
