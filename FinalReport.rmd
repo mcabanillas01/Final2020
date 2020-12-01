@@ -39,6 +39,16 @@ Every question is of the cat~cat type
 
 ##Graphical Descriptive Results 
 
+
+```{r}
+dataLGBTQ = filter(FinalData,LGBTQ=="gay")
+barchartGC(~infected + treatment,data=dataLGBTQ)
+barchartGC(~infected + treatment,data=dataLGBTQ, type="percent", main="gays")
+
+```
+
+
+
 ```{r}
 dataG = filter(FinalData,sex=="guy")
 barchartGC(~infected + treatment,data=dataG)
